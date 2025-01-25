@@ -1,0 +1,218 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root {
+  --fontLogo: "Kanit", Bold 700 Italic;
+  --fontDefault: "Noto Sans", sans-serif;
+  --crema: #1A5C7D;
+  --cafe: #FFF;
+  --cafeClaro: #1A6678;
+  --cafeSemiOscuro: #124F58;
+  --cafeOscuro: #342609;
+}
+.contenido {
+  grid-area: content;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+.cajaAgregar,
+.cajaRotacion,
+.cajaGanancias {
+  height: auto;
+  width: 85%;
+  border-radius: 2rem;
+  box-shadow: 7px 11px 20px -1px rgba(0, 0, 0, 0.37);
+  -webkit-box-shadow: 7px 11px 20px -1px rgba(0, 0, 0, 0.37);
+  -moz-box-shadow: 7px 11px 20px -1px rgba(0, 0, 0, 0.37);
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Alineación vertical al centro */
+  justify-content: initial; /* Alineación horizontal al centro */
+  margin: 2rem 0 2rem 0;
+  padding-bottom: 2rem;
+}
+.cajaRotacion h3,
+.cajaAgregar h3,
+.cajaGanancias h3,
+.cajaTablaVista h3 {
+  font-family: var(--fontDefault);
+  color: var(--cafeOscuro);
+  text-align: center;
+  font-weight: bolder;
+}
+.boxInput {
+  height: 85%;
+  width: 95%;
+  display: grid;
+  grid-template-rows: repeat(4, 1fr); /* Divide en 4 filas de tamaño igual */
+  grid-template-columns: repeat(
+    2,
+    1fr
+  ); /* Divide en 2 columnas de tamaño igual */
+}
+.boxInput > * {
+  height: 100%;
+  width: 100%;
+}
+
+.boxInput .inputAdd {
+  margin-left: 1.5rem;
+  margin-top: 2rem;
+}
+.boxInput .inputAdd label {
+  font-family: var(--fontDefault);
+  max-width: 400;
+  min-width: 100;
+  margin-right: 1rem;
+}
+.boxInput #boxButtonAdd {
+  text-align: end;
+  grid-column: 2;
+}
+.boxInput #boxButtonAdd button {
+  margin-right: 2.5rem;
+}
+
+/*Modulo de rotacion*/
+.contentRotacion,
+.contentGanancias {
+  width: 90%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+}
+.rotacionDivNav {
+  height: 20%;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+.contentNav {
+  margin-left: 0.5rem;
+  margin-right: 0.8rem;
+}
+.boxInputRotacion {
+  display: grid;
+  width: 100%;
+  height: auto;
+  grid-template-columns: repeat(
+    2,
+    1fr
+  ); /* Divide en 2 columnas de tamaño igual */
+}
+.boxDato,
+.boxChart {
+  display: flex;
+  align-items: center; /* Alineación vertical al centro */
+  justify-content: center; /* Alineación horizontal al centro */
+  margin: 0.5rem;
+}
+.boxDato {
+  min-height: 6rem;
+  box-shadow: 9px 8px 22px -1px rgba(0, 0, 0, 0.04);
+  -webkit-box-shadow: 9px 8px 22px -1px rgba(0, 0, 0, 0.04);
+  -moz-box-shadow: 9px 8px 22px -1px rgba(0, 0, 0, 0.04);
+  border-radius: 1.5rem;
+  justify-content: space-between;
+  padding: 0.5rem 1.5rem 0.5rem 1.5rem;
+}
+.fechas{
+  background-color: #3AC138;
+}
+.infoBox {
+  font-family: var(--fontDefault);
+  font-size: larger;
+  width: 60%;
+  align-items: center;
+  color: white;
+}
+
+/*Ganancias*/
+.gananciasDivNav {
+  height: 20%;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+
+}
+.boxInputGanancias {
+  display: grid;
+  width: 100%;
+  height: auto;
+  grid-template-columns: repeat(
+    2,
+    1fr
+  );
+}
+#bigChart {
+  grid-row-start: 1;
+  grid-row-end: 3;
+  grid-column: 2;
+}
+
+/*Visualizar Factura*/
+.cajaTablaVista {
+  height: auto;
+  width: 85%;
+  border-radius: 2rem;
+  box-shadow: 7px 11px 20px -1px rgba(0, 0, 0, 0.37);
+  -webkit-box-shadow: 7px 11px 20px -1px rgba(0, 0, 0, 0.37);
+  -moz-box-shadow: 7px 11px 20px -1px rgba(0, 0, 0, 0.37);
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Alineación vertical al centro */
+  justify-content: initial; /* Alineación horizontal al centro */
+  margin: 2rem 0 2rem 0;
+  padding-bottom: 2rem;
+}
+
+.contentVistaFactura {
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  flex: 1; /* Ocupa todo el espacio disponible */
+  flex-grow: 1; /* Asegura el crecimiento vertical */
+}
+
+.vistaVentasDivNav {
+  height: 20%;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content: center;
+  gap: 2rem;
+}
+.cardTableView {
+  margin: 1.5rem 0 1.5rem 0;
+}
+.boxTableView {
+  text-align: end;
+}
+.boxTableView label {
+  margin-right: 2rem;
+  font-family: var(--fontDefault);
+  font-weight: bold;
+}
+.fechas{
+  background-color: #3AC138;
+  background-color: #0E82CD;
+}
+.cantidad{
+  background-color: #E2BB0C;
+}
+.rotacionGod{
+  background-color: #0DC12B;
+}
+.dataBad{
+  background-color: #C1120D;
+}

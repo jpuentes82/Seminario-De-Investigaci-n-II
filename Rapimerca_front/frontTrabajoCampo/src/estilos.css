@@ -1,0 +1,111 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap');
+
+:root{
+  --fontLogo: 'Dancing Script', cursive;
+  --fontDefault: 'Noto Sans', sans-serif;
+  --crema: #1A5C7D;
+  --cafe: #fff;
+  --cafeClaro: #1A6678;
+  --cafeSemiOscuro: #124F58;
+  --cafeOscuro: #342609;
+}
+/*boton modificar
+*/
+.botonMod{
+  margin-right: 1.5rem;
+  margin-left: 1rem;
+  background-color: blue;
+}
+.Modificar{
+  height: 80%;
+  width: 80%;
+  border-radius: 2rem;
+  box-shadow: 7px 11px 20px -1px rgba(0, 0, 0, 0.37);
+  text-align: center;
+  
+}
+.Modificar h3{
+    font-family: var(--fontDefault);
+    color: var(--cafeOscuro);
+    text-align: center;
+    font-weight: bolder;
+}
+.inputAdd button{
+  
+  text-align: end;
+  grid-column: 2;
+  margin-right: 2.5rem;
+}
+/*eliminar*/
+.eliminar{
+  height: 70%;
+  width: 80%;
+  border-radius: 2rem;
+  box-shadow: 7px 11px 20px -1px rgba(0, 0, 0, 0.37);
+
+}
+.boxBorrar{
+  display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px,;
+}
+.boxBorrar label {
+  font-family: var(--fontDefault);
+    font-weight: 400;
+    margin-right: 1rem;
+    
+}
+.boxBorrar Input{
+  font-size: 25px;
+  border: 1%;
+  margin-right: 1rem;
+
+
+}
+.boxBorrar button{
+  padding: 6px 30px;
+  font-size: 18px;
+  color: white;
+  font-family: var(--fontDefault);
+ background-color: rgb(11, 11, 82);
+ border-radius: 10px;
+ border:none;
+}
+
+.imputBor{
+
+  text-align: end;
+  grid-column: 2;
+  margin-right: 2.5rem;
+  
+}
+/*Generar Factura*/
+
+.ImputsGenerar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-family: var(--fontDefault);
+  font-size: 18px;
+}
+
+.inputWrapper {
+  display: flex;
+  align-items: center;
+}
+
+.ImputsGenerar label {
+  margin-right: 20px;
+  color: black;
+}
+
+.ImputsGenerar .p-inputnumber {
+  margin-bottom: -6px;
+}
+
+.ImputsGenerar .p-button {
+  margin-top: 5px;
+  margin-right: 30px;
+}

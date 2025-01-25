@@ -1,0 +1,321 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap');
+
+:root{
+  --fontLogo: 'Dancing Script', cursive;
+  --fontDefault: 'Noto Sans', sans-serif;
+  --crema: #f5e5c1;
+  --cafe: #5D4717;
+  --cafeClaro: #AF8155;
+  --cafeSemiOscuro: #976F49;
+  --cafeOscuro: #342609;
+  --azul: #00A9C5;
+  --azulOscuro: #1A5C7D;
+  --verde: #139608;
+}
+
+body {
+  margin: 0;
+}
+ /*Login*/
+ .container {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   background: url("../public/fondoLogin.svg") center center no-repeat; /* Añadido center center y no-repeat */
+   background-size: cover;
+   width: 100%;
+   height: 100vh;
+ }
+
+.login {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 6%;
+  background-color: var(--azul);
+  padding: 30px 20px 30px 20px;
+  box-shadow: 10px 11px 17px 0px rgba(0,0,0,0.75);
+  
+}
+.logologin{
+  display: inline-block;
+  width: 200px; 
+  margin-bottom: 2rem;
+}
+.login form{
+  display: flex;
+  flex-Direction:column;
+  justify-content: center;
+  align-items: center;
+  
+}
+
+.but_login{
+  margin-top: 1rem;
+  padding: 8px 30px;
+  font-size: 1.5rem;
+  color: white;
+  font-family: var(--fontDefault);
+  background-color: var(--azulOscuro);
+  border-radius: 10px;
+  border: none;
+  outline: none;
+  transition: background-color 0.3s, transform 0.3s;
+}
+.but_login:hover{
+  background-color: var(--verde);
+  transform: scale(1.1); /* Aumenta el tamaño en un 10% */
+}
+
+.form-group{
+  padding:30px;
+  
+  
+}
+.formcaja{
+  font-size: 29px;
+  border-radius: 9px;
+  border:none;
+}
+.form-group span{
+  font-size: 38px;
+  color: var(--cafeOscuro);
+  padding-right: 15px;
+}
+/*header o barra de navegacion}
+*/
+.header {
+  background-color: var(--crema);
+  display: flex;
+  align-items: center;
+  height: 132px;
+}
+.app-logo{
+  height: 80px;
+}
+.header .logo {
+  padding-left: 2rem;
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
+}
+
+.header .logo span {
+  display: flex;
+  font-size: 90px;
+  font-weight: bolder;
+  margin-top: -10px;
+}
+
+.header .logo h3 {
+  font-family: var(--fontLogo);
+  font-size: 40px;
+  color: var(--cafe);
+  display: flex;
+  margin-left: 10px;
+  font-weight: 500;
+}
+
+.header .nav {
+  flex-grow: 2;
+}
+
+.header nav ul {
+  height: 132px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  list-style: none;
+}
+
+.header li {
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 17px;
+  margin-left: 15px;
+  margin-right: 3rem;
+}
+
+.header li a {
+  font-family: var(--fontDefault);
+  padding-right: 1rem;
+  color: var(--cafe);
+  transition: all 300ms;
+  text-decoration: none;
+}
+.header li a span{
+  padding-left: .5rem;
+  font-size: 1.2rem;
+  font-weight: bold;
+  transition: all 100ms;
+  text-decoration: none;
+}
+.header li a span:hover,
+.header .active,
+.header a:hover {
+  color: red;
+}
+
+/*Barra lateral*/
+.layout {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  display: grid;
+  grid-template-areas:
+    "lateral content";
+  grid-template-rows: auto 1fr;
+  grid-template-columns: 20% 80%;
+}
+
+.lateral {
+  position: relative;
+  height: 100%;
+  grid-area: lateral;
+  background: var(--cafeClaro);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.box-button {
+  display: flex;
+  flex-direction: column;
+  min-width: 120px;
+  width: 80%; /* Adaptarse al tamaño de lateral en lo ancho */
+  margin-top: 2rem;
+  flex-grow: 1; /* Ocupar todo el espacio vertical disponible */
+  background-color: var(--cafeSemiOscuro);
+  border-radius: 1rem;
+  box-shadow: inset 0 0 0.4rem 0.1rem rgba(0, 0, 0, 0.3);
+}
+ .ventas{
+  margin-bottom: 3.3rem;
+}
+
+.box-button h3{
+  margin: 1rem 0 0 1rem ;
+  font-family: var(--fontDefault);
+  color: white;
+  font-weight: 550;
+}
+.box-button ul{
+  margin-left: 1rem;
+  padding-left: 0;
+}
+.box-button ul li {
+  color: white;
+  list-style: none;
+  margin-bottom: .3rem;  
+}
+.box-button ul li a{
+  color: white;
+  text-decoration: none;
+  font-family: var(--fontDefault);  
+}
+
+.box-button ul li .active,
+.box-button ul li a:hover {
+  color: var(--cafeOscuro);
+}
+.box-button ul li span{
+  padding-right: 1rem;
+}
+
+
+/*Contenido*/
+.content{
+  grid-area: content;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.content .logoMain{
+  opacity: 60%;
+  width: 30%;
+}
+.content .textLogo{
+  font-family: var(--fontLogo);
+  margin: 0 ;
+  font-size: 4rem;
+  color: var(--cafe);
+}
+.container{
+  display: flex;
+  justify-content: center;
+  margin: auto;
+}
+
+/*
+Estilos pagina no encontrada
+*/
+.bodyNofound {
+  margin: 0;
+  padding: 0;
+  background-color: #0a1821;
+  height: 100vh;
+  width: 100vw;
+  font-family: Roboto, Arial, sans-serif;
+  color: #fff;
+  text-align: center;
+}
+.not-found {
+  width: 560px;
+  height: 225px;
+  margin-right: -10px;
+}
+.starry-sky {
+  display: block;
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+}
+.search-icon {
+  display: inline-block;
+}
+.notfound-copy {
+  color: #fff;
+  position: fixed;
+  top: 25px;
+  right: 10%;
+  text-align: right;
+}
+.noFoundH1 {
+   font-weight: 700;
+  font-size: 40px;
+}
+.linkNofound {
+  font-weight: 300;
+  color: #fff;
+  border-bottom: 1.5px solid #5581d4;
+  text-decoration: none;
+}
+.linkNofound:hover {
+  font-weight: 300;
+  color: #fff;
+  border-bottom: 2px solid #fff;
+  text-decoration: none;
+}
+/* change to alternating star opacities */
+.all-stars {
+  animation: blinkblink 7s linear infinite;
+}
+
+@keyframes blinkblink {  
+  50% { opacity: 0.1; }
+}
+.noFoundInput {
+  color: #fff;
+  background-color: #0a1821;
+  padding:5px; 
+  border: none; 
+  border-bottom:2px solid #ccc; 
+  font-size: 18px;
+}
+.noFoundInput:focus {
+  border-color:none; 
+  border-bottom:2px solid #ccc;
+  }
